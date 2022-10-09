@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<!--[if IE 8 ]>
+<html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]>
+<html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Talenterminal</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- CSS
+  ================================================== -->
+    <link rel="stylesheet" href="/static/css/base.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/vendor.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="/static/js/modernizr.js"></script>
+
+    <!-- favicons
+     ================================================== -->
+    <link rel="icon" type="image/png" href="/static/images/ust_logo.png">
+    {% if messages %}
+        {% for message in messages %}
+            <script>
+                alert('Congratulations, we receive your application and will contact you within 24 hours!')
+            </script>
+        {% endfor %}
+    {% endif %}
+</head>
+
+<body id="top">
+
+<!-- header
+================================================== -->
+<header>
+
+    <div class="row">
+
+        <div class="logo">
+            <a href="{% url "home" %}">Talenterminal</a>
+        </div>
+
+        <nav id="main-nav-wrap">
+            <ul class="main-navigation">
+                <li class="current"><a class="smoothscroll" href="#intro" title="">Home</a></li>
+                <li><a href="{% url "company_apply" %}" title="">For Clients</a></li>
+                <li><a href="{% url "dev_apply" %}" title="">For Developers</a></li>
+                <li><a class="smoothscroll" href="#process" title="">How it works</a></li>
+                <li><a class="smoothscroll" href="#faq" title="">faq</a></li>
+                <li><a class="smoothscroll" href="#contacts" title="">contact</a></li>
+
+            </ul>
+        </nav>
+
+        <a class="menu-toggle" href="#"><span>Menu</span></a>
+
+    </div>
+
+</header> <!-- /header -->
+
+<!-- intro section
+================================================== -->
+<section id="intro">
+
+    <div class="shadow-overlay"></div>
+
+    <div class="intro-content">
+        <div class="row">
+
+            <div class="col-twelve">
+                <div id="default_page">
+
+                    <div class='video-link' style="min-height: 250px">
+                        <img src="/static/images/logo.png" alt="">
+                    </div>
+
+                    <h2 style="color: #ffffff; font-size: 4.4rem">WE HIRE DEVS TO YOUR BUSINESS</h2>
+                    <h5>Match devs and companies in Europe, Turkey and Iran</h5>
+                    <a class="button stroke  " href="{% url "company_apply" %}" title="for clients">find me a dev</a>
+                    <a class="button stroke  " href="{% url "dev_apply" %}" title="for developers">find me a job</a>
+
+                </div>
+                <div id="default_page">
+
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Modal Popup
+        ========================================================= -->
+
+        <div id="video-popup" class="popup-modal mfp-hide">
+
+            <div class="fluid-video-wrapper">
+                <iframe src="http://player.vimeo.com/video/14592941?title=0&amp;byline=0&amp;portrait=0&amp;color=faec09"
+                        width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen
+                        allowfullscreen></iframe>
+            </div>
+
+            <a class="close-popup">Close</a>
+
+        </div> <!-- /video-popup -->
+
+</section> <!-- /intro -->
+
+
+<!-- Process Section
+================================================== -->
+<section id="process">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+
+            <h5>PROCESS</h5>
+            <h1>How it works?</h1>
+
+            <p class="lead">If your company needs a developer, all you need is filling <a
+                    href="{% url 'company_apply' %}" style="cursor: pointer">this form</a>. Our team
+                will analyse your request and search for best candidates who fit your criteria using AI technology.</p>
+
+        </div>
+    </div>
+
+    <div class="row process-content">
+
+        <div class="left-side">
+
+            <div class="item" data-item="1">
+
+                <h5>Company Applies a Job Position</h5>
+
+                <p>Companies fill the form and specify the Qualifications, Requirements and Technologies needed for the
+                    job position.</p>
+
+            </div>
+
+            <div class="item" data-item="2">
+
+                <h5>We Review Company Request</h5>
+
+                <p>Our team member search among hundreds of CVs to find the best employees compatible with your
+                    requisitions.
+                    All the survivors undergo the screening call (soft skills and language proficiency check)
+                </p>
+
+            </div>
+
+        </div> <!-- /left-side -->
+
+        <div class="right-side">
+
+            <div class="item" data-item="3">
+
+                <h5>Hard Skills Check</h5>
+
+                <p>The list of remaining heroes send to the company to check candidates technical skills by face to face
+                    interview.</p>
+
+            </div>
+
+            <div class="item" data-item="4">
+
+                <h5>The final step, Contract!</h5>
+
+                <p>Our concept is <strong>"No Cure, No Pay"</strong> we just ask for money if we could find right person
+                    to you.
+
+                </p>
+
+            </div>
+
+
+        </div> <!-- /right-side -->
+
+        <div class="image-part"></div>
+
+
+    </div> <!-- /process-content -->
+
+
+</section> <!-- /process-->
+
+
+<!-- features Section
+================================================== -->
+<section id="features">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+
+            <h1>Great features you'll love.</h1>
+
+            <p class="lead">Why you should work with us</p>
+
+        </div>
+    </div>
+
+    <div class="row features-content">
+
+        <div class="features-list block-1-3 block-s-1-2 block-tab-full group">
+
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-clock"></i></span>
+
+                <div class="service-content">
+
+                    <h3 class="h05">Fully Available</h3>
+
+                    <p> Our team is accessible all days a week 7/24.
+                    </p>
+
+                </div>
+
+            </div> <!-- /bgrid -->
+
+
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-eye"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">continus monitoring</h3>
+
+                    <p>Every day we are searching new talents. We are absolute talent hunters.
+                    </p>
+
+
+                </div>
+
+            </div> <!-- /bgrid -->
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-rotate-clock"></i></span>
+
+                <div class="service-content">
+
+                    <h3 class="h05">Fast Reply</h3>
+
+                    <p> We can find you right employees less than 48 hours!
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-search"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">Filtering Candidates</h3>
+
+                    <p>Before presenting developers we meet candidates and check their personality, language proficiency
+                        and check
+                        whether they are compatible with your company culture or not.
+                    </p>
+
+
+                </div>
+
+            </div> <!-- /bgrid -->
+
+
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-layers"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">Compare hundreds of CV's</h3>
+
+                    <p> According to your prerequisites, AI helps our team to find correct employee among hundreds of
+                        candidates.
+                    </p>
+
+
+                </div>
+
+            </div> <!-- /bgrid -->
+
+            <div class="bgrid feature">
+
+                <span class="icon"><i class="icon-card"></i></span>
+
+                <div class="service-content">
+                    <h3 class="h05">Work permit</h3>
+
+                    <p>We can arrange work permit for foreign candidates who want to work in Turkey.
+                    </p>
+
+                </div>
+
+            </div> <!-- /bgrid -->
+
+        </div> <!-- features-list -->
+
+    </div> <!-- features-content -->
+
+</section> <!-- /features -->
+
+
+<!-- faq
+================================================== -->
+<section id="faq">
+
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+
+            <h5>Faq</h5>
+            <h1>Questions and Answers.</h1>
+
+            <p class="lead">For <strong>Clients</strong></p>
+
+        </div>
+    </div>
+
+    <div class="row faq-content">
+
+        <div class="q-and-a block-1-2 block-tab-full group">
+
+            <div class="bgrid">
+
+                <h3>Our company located in Turkey what are the criteria for hiring foreigner developer? (i prefer to
+                    answer in Turkish :-D )</h3>
+                <p>bu <a
+                        href="https://www.csgb.gov.tr/uigm/calisma-izni/calisma-izni-degerlendirme-kriterleri/">linkte</a>
+                    tüm detaylar belirtilmiştir ancak belirli yöntemler kullanarak asgeri ücretin 1.5 katı göstererek
+                    istihdam sağlanabilir. Çalışma izni süreci firmamız yardımıyla çözümlenebilir.</p>
+
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>Can developers work in my office?</h3>
+
+                <p>hiring developers on a full-time basis means they can work remotely or visit your office to meet your
+                    team. you will cover all travel expenses in this case. we can discuss relocations individually.</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>Where is your main office?</h3>
+
+                <p>We are currently located in İzmir/Türkiye.</p>
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>Do i get to communicate with the developer directly?</h3>
+
+                <p>yes</p>
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>Where are developers located?</h3>
+
+                <p>most of developers are come from Turkey, Iran and Middle East</p>
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>Can i see the developer’s cv?</h3>
+
+                <p>yes</p>
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>How do I start?</h3>
+
+                <p>it takes a few steps. fill out <a style="cursor: pointer" href="{% url 'company_apply' %}">this
+                    form</a> and let our manager contact you for details. after that, you’ll meet your assigned
+                    candidate and approve them.</p>
+
+            </div>
+
+            <div class="bgrid">
+
+                <h3>When and how much will be i billed?</h3>
+
+                <p>after you accept the developer, the price depend on the developers contract</p>
+
+            </div>
+
+        </div> <!-- /q-and-a -->
+
+    </div>
+    <div class="row section-intro">
+        <div class="col-twelve with-bottom-line">
+            <p class="lead">For <strong>Developers</strong></p>
+        </div>
+    </div>
+    <div class="row faq-content">
+
+        <div class="q-and-a block-1-2 block-tab-full group">
+
+            <div class="bgrid">
+
+                <h3>How do I start?</h3>
+
+                <p>All you need is fill <a href="{% url 'dev_apply' %}">this form</a>, to have better filtering among
+                    other CVs we recommend you to fill all the fields carefully.</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>Can I work remotely?</h3>
+
+                <p>It is totally depends on the position.</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>I am from Iran How can I work in Türkiye?</h3>
+
+                <p>You can work remotely or take a work permit and stay in Türkiye (benefit of this option is you can
+                    get Turkish Citizenship after 5 years)</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>I am from Iran how can I apply to Europe companies?</h3>
+
+                <p>If the position is a remote job we can handle money transfer to Iran else you can take visa</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>I am from Turkiye how can I work remotely to Europe or USA companies?</h3>
+
+                <p>You can open a LTD or Şahis Company, we can also bill the hiring company and pay to you after tax
+                    retirement</p>
+
+            </div>
+            <div class="bgrid">
+
+                <h3>I am Iranian how can I get work permit in Turkey?</h3>
+
+                <p>If you are currently living in Iran From Turkish embassies in Tehran, Tabriz and Urmiye,
+                    The process will be explained after acceptance</p>
+
+            </div>
+
+
+        </div> <!-- /q-and-a -->
+
+    </div>
+
+
+</section> <!-- /faq -->
+
+
+<!-- footer
+================================================== -->
+<footer id="contacts_background">
+
+    <div class="footer-main" id="contacts">
+
+        <div class="row">
+
+            <div class="col-four tab-full mob-full footer-info">
+
+                <div class="footer-logo"></div>
+
+                <p class="onhover">
+                    Megapol Tower, Adalet Mahallesi<br> No:41 / 1001 Bayraklı,<br> İzmir - Türkiye 35430
+                <hr>
+                <i class="icon-mail"></i> <span class="onhover"
+                                                style="margin-right: 5px">info@talenterminal.com<br></span>
+                <i class="icon-mobile"></i> <span class="onhover" style="margin-right: 5px">+90 552 286 50 41</span><br>
+                <i class="icon-phone"></i> <span class="onhover" style="margin-right: 5px">+90 232 435 18 09</span>
+                </p>
+
+            </div> <!-- /footer-info -->
+
+            <div class="col-two tab-1-3 mob-1-2 site-links">
+
+                <h4>Site Links</h4>
+
+                <ul>
+
+                    <li><a href="{% url "company_apply" %}">For Clients</a></li>
+                    <li><a href="{% url "dev_apply" %}">For Developers</a></li>
+                    <li><a href="#process">How it works</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+
+                </ul>
+
+            </div> <!-- /site-links -->
+
+            <div class="col-two tab-1-3 mob-1-2 social-links">
+
+                <h4>Social</h4>
+
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/talenterminal/">Linkedin</a></li>
+                    <li><a href="https://t.me/talenterminal">Telegram</a></li>
+                    <li><a href="https://wa.me/905380605040">WhatsApp</a></li>
+                    <li><a href="#">Skype</a></li>
+                </ul>
+
+            </div> <!-- /social -->
+
+            <div class="col-four tab-1-3 mob-full footer-subscribe">
+
+                <h4>Leave your Email</h4>
+
+                <p class="onhover">Do You Need More Info?<br>
+                    Just Leave Your Email In The Bellow Section!</p>
+
+                <div class="subscribe-form">
+
+                    <form action="." method="POST">
+                        {% csrf_token %}
+                        <input type="email" name="direct_mail" class="email" id="mc-email"
+                               placeholder="type email &amp; hit enter" required>
+
+                        <button type="submit" class="btn btn-success">submit</button>
+
+
+                    </form>
+
+                </div>
+
+            </div> <!-- /subscribe -->
+
+        </div> <!-- /row -->
+
+    </div> <!-- /footer-main -->
+
+
+    <div class="footer-bottom">
+
+        <div class="row">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Talenterminal 2022.</span>
+
+                </div>
+
+                <div id="go-top" style="display: block;">
+                    <a class="smoothscroll" title="Back to Top" href="#top"><i
+                            class="icon ion-android-arrow-up"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- /footer-bottom -->
+
+    </div>
+
+</footer>
+
+<div id="preloader">
+    <div id="loader"></div>
+</div>
+
+<!-- Java Script ================================================== -->
+<script src="/static/js/jquery-1.11.3.min.js"></script>
+<script src="/static/js/jquery-migrate-1.2.1.min.js"></script>
+<script src="/static/js/plugins.js"></script>
+<script src="/static/js/main.js"></script>
+
+</body>
+
+</html>
